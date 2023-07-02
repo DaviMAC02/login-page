@@ -83,43 +83,60 @@ export const FormInputBox = styled.div`
   flex-direction: column;
   position: relative;
   width: 28.3125rem;
-  height: 4rem;
 `
 
 
 interface FormInputIconProps {
   imagePath: string;
+  iconTop?: string;
 }
 
-export const FormInputIcon = styled.div<FormInputIconProps>`
+export const FormInputLeftIcon = styled.div<FormInputIconProps>`
     display: flex;
     position: absolute;
     width: 1.87rem;
     height: 1.87rem;
-    top: 1rem;
+    top: ${props => props.iconTop};
     left: 1.25rem;
     background-image: url(${props => props.imagePath});
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
 `
 
+export const FormInputRightIcon = styled.div<FormInputIconProps>`
+    display: flex;
+    position: absolute;
+    width: 1.87rem;
+    height: 1.87rem;
+    top: ${props => props.iconTop};
+    right: 1.25rem;
+    background-image: url(${props => props.imagePath});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+`
+
 interface FormInputProps {
+  type?: string;
   placeholder?: string;
-  marginTop?: string;
+  margin?: string;
 }
 
-export const FormInput = styled.input`
+export const FormInputField = styled.input`
 ${({
   placeholder = 'email',
-  marginTop = '0px'
+  margin = '0px',
+  type = 'text'
 }: FormInputProps) => css`
     display: flex;
     width: 28.3125rem;
+    type: ${type};
     height: 4rem;
     padding: 0.625rem;
     padding-left: 3.7rem;
-    margin-top: ${marginTop};
+    margin: ${margin};
     align-items: center;
     gap: 0.625rem;
     border-radius: 0.625rem;
@@ -156,4 +173,65 @@ justify-content: center;
 width: 50vw;
 height: 100vh;
 background-color: #6172F3;
+`
+
+export const FormActionsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 28.3125rem;
+  margin-top: 0.62rem;
+`
+
+export const RememberMeContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.62rem;
+`
+
+
+interface RememberMeCheckboxProps {
+  checkboxIcon: string;
+}
+
+export const RememberMeCheckbox = styled.div<RememberMeCheckboxProps>`
+${({
+  checkboxIcon
+}: RememberMeCheckboxProps) => css`
+  display: flex;
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+  background-image: url(${checkboxIcon});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  `}
+`
+
+export const RememberMeText = styled.p`
+  display: flex;
+  width: 8.4375rem;
+  height: 1.75rem;
+  flex-direction: column;
+  justify-content: center;
+  color: #71717A;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+`
+
+export const ForgotPasswordText = styled.p`
+  display: flex;
+  height: 1.75rem;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #8098F9;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5rem;
 `

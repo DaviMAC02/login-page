@@ -5,17 +5,11 @@ import {
   TitlesBox,
   LoginBoxTitle,
   LoginBoxSubtitle,
-  Form,
-  FormInput,
-  FormInputBox,
-  FormInputIcon,
+  SeparatorText,
   SeparatorBox,
   SeparatorLine,
-  SeparatorText,
-  FormInputContainer,
 } from "../styles/styles";
-import envelope from "../assets/envelope.svg"
-import password from "../assets/password.svg"
+import LoginForm from "./form/login-form";
 
 export default function LoginBox() {
   return (
@@ -31,19 +25,7 @@ export default function LoginBox() {
           <SeparatorLine />
         </SeparatorBox>
       </ LoginBoxContainer>
-      <Form>
-        <FormInputContainer>
-          <FormInputBox>
-            <FormInputIcon imagePath={envelope.src} />
-            <FormInput placeholder="Email" />
-          </FormInputBox>
-          <FormInputBox>
-            <FormInputIcon imagePath={password.src} />
-            <FormInput placeholder="Password" />
-          </FormInputBox>
-        </FormInputContainer>
-
-      </Form>
+      <LoginForm />
     </>
   )
 }
