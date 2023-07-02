@@ -1,7 +1,10 @@
 import { styled, css } from "styled-components"
 import { Inter } from 'next/font/google'
+import { Montserrat } from "next/font/google"
+import laptopIcon from '../assets/laptopIcon.png'
 
 const inter = Inter({ subsets: ['latin'] })
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const LoginBoxContainer = styled.div`
 display: flex;
@@ -173,6 +176,37 @@ justify-content: center;
 width: 50vw;
 height: 100vh;
 background-color: #6172F3;
+`
+
+export const RightSideImage = styled.div`
+  width: 32vw;
+  height: 32vw;
+  background-image: url(${laptopIcon.src});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+`
+
+export const RightSideTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.125rem;
+`
+
+export const RightSideTitle= styled.p`
+  font-family: ${montserrat};
+  color: #FFF;
+  font-weight: 700;
+  font-size: 1.25rem;
+  `
+
+export const RightSideSubtitle = styled.p`
+  font-family: ${montserrat};
+  color: rgba(224, 234, 255, 0.75);
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
 `
 
 export const FormActionsContainer = styled.div`

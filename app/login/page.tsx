@@ -1,7 +1,7 @@
 'use client'
 
 import LoginBox from "./components/login-box";
-import { LeftSide, RightSide } from "./styles/styles";
+import { LeftSide, RightSide, RightSideImage, RightSideSubtitle, RightSideTextContainer, RightSideTitle } from "./styles/styles";
 
 export default function LoginPage() {
 
@@ -14,6 +14,11 @@ export default function LoginPage() {
         <LoginBox />
       </LeftSide>
       <RightSide>
+        <RightSideImage />
+        <RightSideTextContainer>
+          <RightSideTitle>Connect with any device.</RightSideTitle>
+          <RightSideSubtitle>Everything you need is an internet connection.</RightSideSubtitle>
+        </RightSideTextContainer>
       </RightSide>
     </>
   )
