@@ -235,3 +235,54 @@ export const ForgotPasswordText = styled.p`
   font-weight: 600;
   line-height: 1.5rem;
 `
+
+export const LoginButton = styled.button`
+  display: flex;
+  width: 28.3125rem;
+  height: 4rem;
+  padding: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.56rem;
+  border-radius: 0.625rem;
+  background: #8098F9;
+  border: none;
+  color: #FFF;
+  font-size: 1.25rem;
+  font-family: ${inter};
+  font-style: normal;
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background: #6172F3;
+    transition: 0.2s;
+  }
+`
+
+
+export const LoginFooterContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.25rem;
+`
+
+export const DontHaveAccountText = styled.p`
+  color: #71717A;
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+`
+
+export const CreateAccountText = styled.p` 
+  color: #8098F9;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  margin-left: 0.3125rem;
+  cursor: pointer;
+`

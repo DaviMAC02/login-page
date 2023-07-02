@@ -1,4 +1,4 @@
-import {ForgotPasswordText, Form } from "../../styles/styles";
+import {ForgotPasswordText, Form, LoginButton } from "../../styles/styles";
 import envelope from "../../assets/envelope.svg"
 import password from "../../assets/password.svg"
 import eye from "../../assets/eye.svg"
@@ -28,6 +28,7 @@ export default function LoginForm() {
         <RememberMe />
         <ForgotPasswordText>Forgot Password?</ForgotPasswordText>
       </FormActionsContainer>
+      <LoginButton>LOGIN</LoginButton>
     </Form>
   )
 }

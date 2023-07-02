@@ -8,6 +8,9 @@ import {
   SeparatorText,
   SeparatorBox,
   SeparatorLine,
+  LoginFooterContainer,
+  DontHaveAccountText,
+  CreateAccountText,
 } from "../styles/styles";
 import LoginForm from "./form/login-form";
 
@@ -26,6 +29,10 @@ export default function LoginBox() {
         </SeparatorBox>
       </ LoginBoxContainer>
       <LoginForm />
+      <LoginFooterContainer>
+        <DontHaveAccountText>Don't have an account?</DontHaveAccountText>
+        <CreateAccountText>Create Account</CreateAccountText>
+      </LoginFooterContainer>
     </>
   )
 }
